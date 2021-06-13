@@ -1,18 +1,18 @@
 # Dashboard System For Playtomic
 
-Admin dashboard sytem with an authentication layer.
+Admin dashboard sytem with authentication layer.
 
-Try a [live demo](https://playtomic-jcmtallon-test.netlify.app/)!
+Try the [live demo](https://playtomic-jcmtallon-test.netlify.app/)!
 
 ## Getting Started
 
 ### Prerequisites
 
-This app uses [firebase](https://firebase.google.com/) to handle the user authentication.
+This app uses [Firebase](https://firebase.google.com/) to handle the user authentication.
 
-Create a new free app on firebase and connect it to this app by adding the provided identifiers when creating the firebase app to an `.env.local` file in the root directory.
+Create a new free app on Firebase and connect it to this app by adding the provided identifiers when creating the Firebase app to an `.env.local` file in the root directory.
 
-You can find an example of how to fill the `.env.local` file in `.env.local(sample)`.
+You can find an example of how to fill the `.env.local` file in `./env.local(sample)`.
 
 ### Installation
 
