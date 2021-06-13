@@ -15,6 +15,10 @@ module.exports = {
           lightest: "#D4FCA9",
         },
       },
+      minWidth: {
+        sm: "420px",
+        lg: "1024px",
+      },
     },
   },
   variants: {

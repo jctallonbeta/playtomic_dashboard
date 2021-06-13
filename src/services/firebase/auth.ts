@@ -14,6 +14,10 @@ export const signIn = async (email: string, password: string) => {
   return await auth.signInWithEmailAndPassword(email, password);
 };
 
+export const signOut = async () => {
+  return await auth.signOut();
+};
+
 export const onAuthStateChange = (
   setIsLoading: (isLoading: boolean) => void,
   setSession: (session: SessionState) => void

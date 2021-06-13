@@ -1,5 +1,9 @@
-import React from "react";
+import { DashboardLayout } from "../../components/DashboardLayout";
 
 export const Home = () => {
-  return <div>Home</div>;
+  return (
+    <DashboardLayout name="home" title="Home">
+      <div>Home</div>
+    </DashboardLayout>
+  );
 };

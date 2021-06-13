@@ -1,5 +1,9 @@
-import React from "react";
+import { DashboardLayout } from "../../components/DashboardLayout";
 
 export const Settings = () => {
-  return <div>Settings</div>;
+  return (
+    <DashboardLayout name="settings" title="Settings">
+      <div>Settings</div>
+    </DashboardLayout>
+  );
 };
