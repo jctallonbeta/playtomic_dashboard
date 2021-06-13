@@ -1,12 +1,31 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
+import { Redirect } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/logo.svg";
 import { LabelledInput } from "../../components/LabelledInput";
+import { useTsSelector } from "../../hooks/useTsSelector";
+import { signIn } from "../../services/firebase/auth";
 
 export const SignIn = () => {
+  const session = useTsSelector((state) => state.session);
+  const [errorMesasge, setErrorMessage] = useState(null);
+
   const handleLogin = useCallback(async (event) => {
     event.preventDefault();
+    setErrorMessage(null);
+
+    const { email, password } = event.target.elements;
+
+    try {
+      await signIn(email.value, password.value);
+    } catch (error) {
+      setErrorMessage(error.message);
+    }
   }, []);
+
+  if (session.token) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <div className="h-screen w-screen bg-gray-100 text-gray-900 flex justify-center items-center min-w-sm">
@@ -45,6 +64,11 @@ export const SignIn = () => {
             >
               Sign In
             </button>
+            {errorMesasge && (
+              <div className="mt-4 bg-red-100 py-1.5 px-2 text-sm text-red-700">
+                {errorMesasge}
+              </div>
+            )}
           </form>
         </div>
       </div>
