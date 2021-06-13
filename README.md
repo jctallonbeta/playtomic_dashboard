@@ -2,6 +2,8 @@
 
 Admin dashboard sytem with an authentication layer.
 
+Try a [live demo](https://playtomic-jcmtallon-test.netlify.app/)!
+
 ## Getting Started
 
 ### Prerequisites
